@@ -22,6 +22,8 @@
 <body>
     <header class="nav-bar">
         <div class="nav-content">
+            <div class="our-logo">
+            </div>
             <a href="/">
                 <div class="nav-logo">
                     <img src="./static/img/logo.svg" />
@@ -30,20 +32,20 @@
         </div>
     </header>
 
-    <div class="profile">
-        <div id="profile-picture" class="profile-picture">
-            <img src="./static/img/logo.jpg">
-        </div>
-        <h1>{{ title }}</h1>
+    <!-- <iframe src="https://giphy.com/embed/lFNmSjRDN9SiLJ3a9Z" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/water-sea-torrent-lFNmSjRDN9SiLJ3a9Z">via GIPHY</a></p> -->
+
+    <div class = "buttons">
+        <form method="post" action="/home">
+            <input type=submit value="Home" name="homeButton"/>
+        <form method="post" action="/sasha">
+            <input type=submit value="sasha" name="sashaPage"/>
+        <form method="post" action="/lauren">
+            <input type=submit value="lauren" name="laurenPage"/>
+        <form method="post" action="/ruchika">
+            <input type=submit value="ruchika" name="ruchikaPage"/> 
     </div>
-    
-    <form method="post" action="/home">
-        <input type=submit value="Home" name="homeButton"/>
-    <form method="post" action="/sasha">
-        <input type=submit value="sasha" name="sashaPage"/>
-    <form method="post" action="/lauren">
-        <input type=submit value="lauren" name="laurenPage"/>
-    <form method="post" action "/ruchika">
-        <input type=submit value="ruchika" name="ruchikaPage"/>
+        
 </body>
+
+
 </html>
