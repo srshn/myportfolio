@@ -18,7 +18,7 @@ hobby_list = ["Hobby 1", "Hobby 2", "Hobby 3", "Hobby 4"]
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="Index Page", url=os.getenv("URL"))
+    return render_template('index.html', title="Testing Page", url=os.getenv("URL"))
 
 @app.route('/home', methods=['GET', 'POST'])
 def home():
@@ -26,11 +26,11 @@ def home():
     if request.method=='POST':
         if request.form.get('homeButton') == "Home" :
             return render_template('index.html', title="Home Page", url=os.getenv("URL"))
-        elif request.form.get('sashaPage') == "sasha" :
+        elif request.form.get('sashaPage') == "Learn More" :
             return render_template('sasha.html', title="Sasha Page", url=os.getenv("URL"))
-        elif request.form.get('laurenPage') == "lauren" :
+        elif request.form.get('laurenPage') == "Learn More" :
             return render_template('lauren.html', title="Lauren Page", url=os.getenv("URL"))
-        if request.form.get('ruchikaPage') == "ruchika" :
+        if request.form.get('ruchikaPage') == "Learn More" :
             return render_template('ruchika.html', title="Ruchika Page", url=os.getenv("URL"))
     elif request.method=='GET' :
         form=form
@@ -80,4 +80,4 @@ def template_test():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    main
+    
