@@ -15,15 +15,13 @@
             body::before{
                 content: '';
                 position: absolute;
-                width: 100vw;
-                height: 100vh;
                 top: 0px;
                 right: 0px;
                 bottom: 0px;
                 left: 0px;
                 background-image: url('https://media.giphy.com/media/lFNmSjRDN9SiLJ3a9Z/giphy-downsized-large.gif');
                 background-size: cover;
-                background-repeat: no-repeat;
+                background-repeat: round;
                 opacity: .5;
             }
         </style>
@@ -68,7 +66,7 @@
             </div>
         </div>
         <div class="card text-white bg-secondary my-5 py-4 text-center">
-            <div class="card-body"><p class="text-white m-0">More about the shiny sharks</p></div>
+            <div class="card-body"><p class="display-4 text-white m-0">More about the shiny sharks</p></div>
         </div>
         <section id="about">
         </section>
@@ -79,7 +77,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <h2 class="card-title">Lauren</h2>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                        <img class="marginauto" src="./static/img/lauren.jpg" style="width:300px;height:330px;" alt="..." />
                     </div>
                     <div class="card-footer">
                         <a href="{{ url_for('lauren')}}" class="btn btn-primary">Learn More</a>
@@ -90,7 +88,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <h2 class="card-title">Sasha</h2>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                        <img class="marginauto" src="./static/img/sasha.jpg" style="width:280px;height:350px;" alt="..." />
                     </div>
                     <div class="card-footer">
                         <a href="{{ url_for('sasha')}}" class="btn btn-primary">Learn More</a>
@@ -103,7 +101,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <h2 class="card-title">Ruchika</h2>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                        <img class="marginauto" src="./static/img/ruchika.jpg" style="width:280px;height:350px;" alt="..." />
                     </div>
                     <div class="card-footer">
                         <a href="{{ url_for('ruchika')}}" class="btn btn-primary">Learn More</a>
