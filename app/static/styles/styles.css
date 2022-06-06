@@ -560,7 +560,7 @@ progress {
 }
 
 .list-unstyled {
-  padding-left: 0;
+  padding-left: 5;
   list-style: none;
 }
 
@@ -11433,6 +11433,7 @@ html {
 .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
+  height: 100vh;
 }
 .masthead .masthead-heading {
   font-size: 2.75rem;
@@ -22942,7 +22943,6 @@ html {
 .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
-  height: 100vh;
 }
 .masthead .masthead-heading {
   font-size: 2.75rem;
@@ -23015,5 +23015,4 @@ html {
 }
 
 .copyright {
-  background-color: #1a252f;
-}
+  background-color: #1a252f;}
