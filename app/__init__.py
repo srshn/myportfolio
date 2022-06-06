@@ -31,11 +31,11 @@ sashaExperience = ["Fellow, MLH PE Fellowship", "Video Editor, McMaster Silhouet
 sashaEducation = ["McMaster University", "OCAD U"]
 sashaHobbies = ["Photography", "Games", "Reading"]
 
-@app.route('/home')
+@app.route('/home', methods=['GET', 'POST'])
 def home():
     return render_template('homePage.html', title="Index Page", url=os.getenv("URL"))
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
     return render_template('homePage.html', title="Index Page", url=os.getenv("URL"))
 

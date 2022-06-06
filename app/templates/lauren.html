@@ -59,13 +59,7 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- Masthead Subheading-->
-                <!--<p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>-->
-                <p class="masthead-subheading"> 
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/lauren-ciha"><i class="fab fa-github"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://calendly.com/lauren-ciha"><i class="fas fa-calendar-alt"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href='https://www.linkedin.com/in/lauren-ciha/'><i class="fab fa-fw fa-linkedin-in"></i></a>
-                </p>
+
             </div>
             
         </header>
@@ -81,15 +75,17 @@
             <!-- About Section Heading-->
             <h2 class="page-section-heading text-center text-uppercase text-white">About Me</h2>
             <!-- Icon Divider-->
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
+            <p class="masthead-subheading"> 
+                <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/lauren-ciha"><i class="fab fa-github"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://calendly.com/lauren-ciha"><i class="fas fa-calendar-alt"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href='https://www.linkedin.com/in/lauren-ciha/'><i class="fab fa-fw fa-linkedin-in"></i></a>
+            </p>
             <!-- About Section Content-->
             <div class="row">
-                <div class="col-lg-4 ms-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                <div class="col-lg-4 ms-auto"><p class="lead">
+                    Hi! I'm an aspiring software engineer studying computer sciences and philosophy at the University of Wisconsin-Madison. My experience so far has been in Java, C#/Unity, and Python in research settings. In the first half of 2020, I taught myself C# and Unity to program the movement of a virtual reality character. I'm searching for new internships, co-ops, and/or full-time roles in the corporate world.
+                </p></div>
+                
             </div>
             <!-- About Section Button-->
             
@@ -108,8 +104,13 @@
             </div>
             <!-- Education Section Content-->
             <div class="row">
-                <div class="col-lg-4 ms-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                <div class="col-lg-4 ms-auto"><p class="lead">
+                    <ul>
+                        {% for n in education_list %}
+                        <li>{{n}}</li>
+                        {% endfor %}
+                    </ul> 
+                </p></div>
             </div>
             <!-- Education Section Button-->
             
@@ -128,8 +129,14 @@
             </div>
             <!-- Hobbies Section Content-->
             <div class="row">
-                <div class="col-lg-4 ms-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                <div class="col-lg-4 ms-auto"><p class="lead">
+                    <ul>
+                        {% for n in hobby_list %}
+                        <li>{{n}}</li>
+                        {% endfor %}
+                    </ul> 
+                </p></div>
+                
             </div>
             <!-- Hobbies Section Button-->
             
@@ -147,8 +154,13 @@
                 </div>
                 <!-- Work Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead">
+                        <ul>
+                            {% for n in experience_list %}
+                            <li>{{n}}</li>
+                            {% endfor %}
+                        </ul>   
+                    </p></div>
                 </div>
                 <!-- Work Section Button-->
                 

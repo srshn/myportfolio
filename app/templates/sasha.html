@@ -59,13 +59,6 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- Masthead Subheading-->
-                <!--<p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>-->
-                <p class="masthead-subheading"> 
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/lauren-ciha"><i class="fab fa-github"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://calendly.com/lauren-ciha"><i class="fas fa-calendar-alt"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href='https://www.linkedin.com/in/lauren-ciha/'><i class="fab fa-fw fa-linkedin-in"></i></a>
-                </p>
             </div>
             
         </header>
@@ -81,15 +74,16 @@
             <!-- About Section Heading-->
             <h2 class="page-section-heading text-center text-uppercase text-white">About Me</h2>
             <!-- Icon Divider-->
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
+            <p class="masthead-subheading text-center"> 
+                <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/srshn"><i class="fab fa-github"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://calendly.com/srshn"><i class="fas fa-calendar-alt"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href='https://www.linkedin.com/in/srshn/'><i class="fab fa-fw fa-linkedin-in"></i></a>
+            </p>
             <!-- About Section Content-->
             <div class="row">
-                <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
-                <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                <div class="col-lg-4 me-auto"><p class="lead">Hello, my name is Sasha Roshan, and I am going into my third year of Biology at McMaster University in Ontario, Canada. I am also pursuing a concurrent certificate in Geographic Information systems. Besides this fellowship, I am doing a marine biology field course this summer which involves independent research and sampling off the coast of the Bay of Fundy. Career wise, I am hoping to work in the intersection between Computer Science and Marine Biology. My favourite sharks are Elephant Sharks, although they aren’t technically sharks (shh). 
+                </p></div>
+                
             </div>
             <!-- About Section Button-->
             
@@ -108,8 +102,13 @@
             </div>
             <!-- Education Section Content-->
             <div class="row">
-                <div class="col-lg-4 ms-auto"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." /></div>
-                <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                <div class="col-lg-4 me-auto"><p class="lead">
+                    <ul>
+                        {% for n in education_list %}
+                        <li>{{n}}</li>
+                        {% endfor %}
+                    </ul> 
+                </p></div>
             </div>
             <!-- Education Section Button-->
             
@@ -128,12 +127,11 @@
             </div>
             <!-- Hobbies Section Content-->
             <div class="row">
-                <div class="col-lg-4 ms-auto"><img class="img-fluid rounded mb-4 mb-lg-0" src="./static/img/sasha-images/insect6.jpg" alt="..." /></div>
-                <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
-                <div class="col-lg-4 ms-auto"><img class="img-fluid rounded mb-4 mb-lg-0" src="./static/img/sasha-images/racoon.jpeg" alt="..." /></div>
-                <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
-                <div class="col-lg-4 ms-auto"><img class="img-fluid rounded mb-4 mb-lg-0" src="./static/img/sasha-images/short_eared_owl.jpeg" alt="..." /></div>
-                <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                <ul>
+                    {% for n in hobby_list %}
+                    <li>{{n}}</li>
+                    {% endfor %}
+                </ul> 
             </div>
             <!-- Hobbies Section Button-->
             
@@ -149,12 +147,11 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- Work Section Content-->
-                <div class="text-center mt-4 font-weight-bold">
-                    Workplace 1: what you did
-                </div>
-                <div class="text-center mt-4 font-weight-bold">
-                    Workplace 2: what you did
+                    <ul>
+                        {% for n in experience_list %}
+                        <li>{{n}}</li>
+                        {% endfor %}
+                    </ul>   
                 </div>
                 <!-- Work Section Button-->
                 
@@ -172,15 +169,7 @@
                 </div>
                 <!-- Location Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
-                </div>
-                <!-- Location Section Button-->
-                <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
-                        <i class="fas fa-download me-2"></i>
-                        Free Download!
-                    </a> 
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1xYYdLh7wSFE5hBkiUC6VVTWwAgqN0fw&ehbc=2E312F" width="640" height="480"></iframe>
                 </div>
         </section>
 </html> 
