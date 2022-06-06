@@ -22,6 +22,20 @@ def index():
 
 @app.route('/home', methods=['GET', 'POST'])
 def home():
+
+    if request.method=='POST':
+        if request.form.get('homeButton') == "Home" :
+            return render_template('index.html', title="Home Page", url=os.getenv("URL"))
+        elif request.form.get('sashaPage') == "Learn More" :
+            return render_template('sasha.html', title="Sasha Page", url=os.getenv("URL"))
+        elif request.form.get('laurenPage') == "Learn More" :
+            return render_template('lauren.html', title="Lauren", url=os.getenv("URL"))
+        if request.form.get('ruchikaPage') == "Learn More" :
+            return render_template('ruchika.html', title="Ruchika Page", url=os.getenv("URL"))
+    elif request.method=='GET' :
+        form=form
+        return render_template('index.html', form=form)
+    
     return render_template('homePage.html', title="The Home Page", url=os.getenv("URL"))
 
 @app.route('/sasha', methods=['GET', 'POST'])
@@ -30,7 +44,9 @@ def sasha():
 
 @app.route('/lauren', methods= ['POST', 'GET'])
 def lauren():
-    return render_template('lauren.html', title="Lauren Page", url=os.getenv("URL"))
+
+    return render_template('lauren.html', title="Lauren", map_url="https://www.google.com/maps/d/u/0/edit?mid=1XH7YSZNH1D0C2EyBt-MWoSai8VBj-zg&usp=sharing", url=os.getenv("URL"))
+
 
 @app.route('/ruchika', methods= ['POST', 'GET'])
 def ruchika():
