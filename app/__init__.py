@@ -18,6 +18,13 @@ hobby_list = ["Hobby 1", "Hobby 2", "Hobby 3", "Hobby 4"]
 
 @app.route('/')
 def index():
+
+    return render_template('homePage.html', title="Index Page", url=os.getenv("URL"))
+
+@app.route('/home', methods=['GET', 'POST'])
+def home():
+    return render_template('homePage.html', title="The Home Page", url=os.getenv("URL"))
+
     return render_template('index.html', title="Testing Page", url=os.getenv("URL"))
 
 @app.route('/home', methods=['GET', 'POST'])
@@ -40,38 +47,17 @@ def home():
 
 @app.route('/sasha', methods=['GET', 'POST'])
 def sasha():
-    if request.method == 'POST':
-        if request.form.get('homeButton') == "Home" :
-            return render_template('index.html', title="Home Page", url=os.getenv("URL"))
-    elif request.method=='GET':
-        form=form
-        return render_template('sasha.html', title="Sasha Page", url=os.getenv("URL"))
-   
     return render_template('sasha.html', title="Sasha Page", url=os.getenv("URL"))
 
 @app.route('/lauren', methods= ['POST', 'GET'])
 def lauren():
-    if request.method == 'POST':
-       if request.form.get('homeButton') == "Home" :
-            return render_template('index.html', title="Home Page", url=os.getenv("URL"))
-    elif request.method=='GET':
-        form=form
-        return render_template('lauren.html', title="Lauren Page", url=os.getenv("URL"))
-    
     return render_template('lauren.html', title="Lauren Page", url=os.getenv("URL"))
+
+    
 
 @app.route('/ruchika', methods= ['POST', 'GET'])
 def ruchika():
-    if request.method == 'POST':
-        if request.form.get('homeButton') == "Home" :
-            return render_template('index.html', title="Home Page", url=os.getenv("URL"))
-    elif request.method=='GET':
-        form=form
-        return render_template('ruchika.html', title="Ruchika Page", url=os.getenv("URL"))
-    
     return render_template('ruchika.html', title="Ruchika Page", url=os.getenv("URL"))
-
-    return render_template('home.html', title="Home Page", url=os.getenv("URL"))
 
 @app.route('/sample')
 def template_test():
