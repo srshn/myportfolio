@@ -16,21 +16,40 @@ hobby_list = ["Hobby 1", "Hobby 2", "Hobby 3", "Hobby 4"]
 # education_list = ["University of Wisconsin-Madison"]
 # hobby_list = ["reading", "journaling", "running"]
 
+#Lauren
+laurenExperience = ["Schloss Visual Reasoning Lab", "People and Robots Lab", "MLH Fellowship"]
+laurenEducation = ["University of Wisconson-Madison"]
+laurenHobbies = ["reading", "journaling", "running"]
+
+#Ruchika
+ruchikaExperience =["Fellow", "MLH Production Engineering Fellowship","Undergraduate Research Assistant,IUC","Math Tutor, Juni Learning"]
+ruchikaEducation = ["University of Illinois at Urbana Champaign"]
+ruchikaHobbies = ["drumming", "embroidery", "video games"]
+
+#Sasha
+sashaExperience = ["Fellow, MLH PE Fellowship", "Video Editor, McMaster Silhouette", "Make-Up Artist, Sephora"]
+sashaEducation = ["McMaster University", "OCAD U"]
+sashaHobbies = ["Photography", "Games", "Reading"]
+
+@app.route('/home')
+def home():
+    return render_template('homePage.html', title="Index Page", url=os.getenv("URL"))
+
 @app.route('/')
 def index():
     return render_template('homePage.html', title="Index Page", url=os.getenv("URL"))
 
 @app.route('/sasha', methods=['GET', 'POST'])
 def sasha():
-    return render_template('sasha.html', title="Sasha Page", url=os.getenv("URL"))
+    return render_template('sasha.html', title="Sasha Page", experience_list=sashaExperience, education_list=sashaEducation, hobby_list = sashaHobbies,url=os.getenv("URL"))
 
 @app.route('/lauren', methods= ['POST', 'GET'])
 def lauren():
-    return render_template('lauren.html', title="Lauren", url=os.getenv("URL"))
+    return render_template('lauren.html', title="Lauren",experience_list=laurenExperience, education_list=laurenEducation, hobby_list = laurenHobbies, url=os.getenv("URL"))
 
 @app.route('/ruchika', methods= ['POST', 'GET'])
 def ruchika():
-    return render_template('ruchika.html', title="Ruchika Page", url=os.getenv("URL"))
+    return render_template('ruchika.html', title="Ruchika Page", experience_list=ruchikaExperience, education_list=ruchikaEducation, hobby_list = ruchikaHobbies, url=os.getenv("URL"))
 
 @app.route('/sample')
 def template_test():
