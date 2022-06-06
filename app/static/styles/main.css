@@ -76,8 +76,11 @@ body::before{
 }
 
 .profile {
+    background-color: white !important;
+
     position: relative; /* ^ */ 
     background-color: #1d539f !important;
+
     text-align: center;
     height: 320px;
     margin-bottom: 50px;
