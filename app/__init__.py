@@ -18,8 +18,7 @@ hobby_list = ["Hobby 1", "Hobby 2", "Hobby 3", "Hobby 4"]
 
 @app.route('/')
 def index():
-
-    return render_template('homePage.html', title="Index Page", url=os.getenv("URL"))
+    return render_template('index.html', title="Index Page", url=os.getenv("URL"))
 
 @app.route('/home', methods=['GET', 'POST'])
 def home():
@@ -45,7 +44,9 @@ def sasha():
 
 @app.route('/lauren', methods= ['POST', 'GET'])
 def lauren():
+
     return render_template('lauren.html', title="Lauren", map_url="https://www.google.com/maps/d/u/0/edit?mid=1XH7YSZNH1D0C2EyBt-MWoSai8VBj-zg&usp=sharing", url=os.getenv("URL"))
+
 
 @app.route('/ruchika', methods= ['POST', 'GET'])
 def ruchika():
