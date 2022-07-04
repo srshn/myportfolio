@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 
+
 name = "Name"
 experience_list = ["Experience 1", "Experience 2", "Experience 3"]
 education_list = ["Education 1"]
